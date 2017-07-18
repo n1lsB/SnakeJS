@@ -94,7 +94,7 @@ function Snake() {
 		}
 		// Append the tail.
 		if (this.taillength > 0) {
-			this.tail[this.tail.length - 1] = createVector(x, y)
+			this.tail[this.tail.length] = createVector(x, y)
 		}
 		
 		this.checkBounce();
