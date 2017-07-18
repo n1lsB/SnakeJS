@@ -87,11 +87,9 @@ function Snake() {
 		this.checkSelfCollision();
 
 		// Shift the tail.
-		if (this.tail.length == this.taillength) {
-			for (var i = 0; i < this.tail.length - 1; i++) {
-				this.tail[i] = this.tail[i+1];
-			}
-		}
+		if (this.tail.length >= this.taillength)
+			this.tail.shift();
+		
 		// Append the tail.
 		if (this.taillength > 0) {
 			this.tail[this.tail.length] = createVector(x, y)
